@@ -73,6 +73,8 @@ trait JsonSchemasTestInterpreter extends endpoints.algebra.JsonSchemas {
 
   implicit def booleanJsonSchema: JsonSchema[Boolean] = "boolean"
 
+  implicit def byteJsonSchema: JsonSchema[Byte] = "byte"
+
   implicit def arrayJsonSchema[C[X] <: Seq[X], A](implicit jsonSchema: JsonSchema[A],
                                                   factory: Factory[A, C[A]]): JsonSchema[C[A]] =
     s"[$jsonSchema]"

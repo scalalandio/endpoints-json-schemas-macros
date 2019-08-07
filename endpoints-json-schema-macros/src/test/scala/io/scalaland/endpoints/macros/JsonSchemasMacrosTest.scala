@@ -19,6 +19,7 @@ object JsonSchemasMacrosTest extends TestSuite {
       genericJsonSchema[Float] ==> "float"
       genericJsonSchema[Double] ==> "double"
       genericJsonSchema[Boolean] ==> "boolean"
+      genericJsonSchema[Byte] ==> "byte"
     }
 
     "macros derive JsonSchema for case class" - {

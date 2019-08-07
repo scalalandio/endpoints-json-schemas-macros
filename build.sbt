@@ -3,8 +3,8 @@ import sbtcrossproject.CrossPlugin.autoImport.{crossProject, CrossType}
 scalaVersion := "2.12.8"
 
 val versions = new {
-  val endpoints = "0.9.0"
-  val utest = "0.6.7"
+  val endpoints = "0.10.0"
+  val utest = "0.7.1"
 }
 
 lazy val jsonSchemaMacros = crossProject(JSPlatform, JVMPlatform)
@@ -13,7 +13,7 @@ lazy val jsonSchemaMacros = crossProject(JSPlatform, JVMPlatform)
   .settings(
     name := "endpoints-json-schema-macros",
     organization := "io.scalaland",
-    version := "0.9.0",
+    version := "0.10.0",
     libraryDependencies ++= Seq(
       "org.julienrf" %%% "endpoints-algebra-json-schema" % versions.endpoints % "provided",
       "org.scala-lang" % "scala-reflect" % scalaVersion.value % "provided",
